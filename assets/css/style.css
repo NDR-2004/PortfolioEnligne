@@ -1,0 +1,444 @@
+/* ===== Thème (couleurs & typos) ===== */
+:root{
+  --bg: #f8fafc;          /* fond */
+  --card: #ffffff;        /* blocs / header */
+  --text: #0f172a;        /* texte principal */
+  --muted: #475569;       /* texte secondaire */
+  --accent: #6c63ff;      /* violet (rappelle ton logo) */
+  --accent-soft: #eef2ff; /* hover clair */
+  --line: #e5e7eb;        /* bordures */
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1020; --card:#0f172a; --text:#e2e8f0; --muted:#94a3b8;
+    --accent:#8b8bff; --accent-soft:#1e213a; --line:#243041;
+  }
+}
+
+/* ===== Reset léger & base ===== */
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
+img{ max-width:100%; display:block; }
+body{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Titres & textes */
+h1,h2,h3{ margin:0 0 .4rem; line-height:1.25; }
+h2{ font-size:clamp(22px, 2.6vw, 30px); }
+p{ margin:.6rem 0; color:var(--muted); }
+strong,b{ color:var(--text); }
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+/* ===== Header / Nav ===== */
+header{
+  position: sticky; top:0; z-index:50;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(1.2) blur(6px);
+}
+.navbar{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+
+/* Logo */
+.logo img{
+  width: 160px; /* tu avais 200px : un peu plus compact */
+  height: auto; vertical-align: middle;
+}
+
+/* Liens de nav */
+.nav-links{
+  list-style:none; display:flex; gap: 18px; margin:0; padding:0;
+}
+.nav-links li{ position:relative; }
+.nav-links a{
+  display:inline-block;
+  padding:8px 12px; border-radius:999px;
+  color:var(--text); font-weight:600;
+}
+.nav-links a:hover,
+.nav-links a.active{
+  background:var(--accent-soft); color:var(--accent);
+}
+
+/* Sous-menu */
+.dropdown-menu{
+  display:none; position:absolute; top:110%; left:0;
+  background:var(--card); border:1px solid var(--line);
+  border-radius:10px; min-width:210px; padding:8px 0; list-style:none;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+.dropdown:hover .dropdown-menu{ display:block; }
+.dropdown-menu li{ padding:2px 6px; }
+.dropdown-menu a{
+  display:block; padding:10px 14px; border-radius:8px; color:var(--text);
+}
+.dropdown-menu a:hover{ background:var(--accent-soft); color:var(--accent); }
+
+/* ===== Sections ===== */
+section{ padding: 40px 16px; }
+.container{ max-width: 1000px; margin: 0 auto; }
+
+/* Hero */
+.hero{
+  background:
+    radial-gradient(1200px 400px at 10% -10%, var(--accent-soft), transparent 60%),
+    linear-gradient(to bottom, rgba(108,99,255,.05), transparent 40%);
+  border-bottom: 1px solid var(--line);
+}
+.hero .hero-content{
+  max-width: 1000px; margin: 0 auto; padding: 20px 0;
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+}
+.photo-profil{
+  width: 96px; height: 96px; object-fit:cover; border-radius:50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 6px 16px rgba(108,99,255,.25);
+}
+.hero h2{ font-size: clamp(24px, 3vw, 36px); font-weight:700; }
+.hero h2 span{ color: var(--accent); }
+
+/* À propos (carte simple) */
+.about .container, .socials .container{ }
+.about .card{
+  background: var(--card); border:1px solid var(--line);
+  border-radius: 16px; padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+
+/* Réseaux sociaux */
+.social-links{
+  display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;
+}
+.social-links a{
+  width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:50%;
+  background: var(--accent-soft); color: var(--accent);
+  border:1px solid var(--line);
+  transition:.15s transform ease;
+}
+.social-links a:hover{ transform: translateY(-1px); }
+
+/* Pied de page */
+footer{
+  border-top:1px solid var(--line);
+  text-align:center; color:var(--muted);
+  padding: 24px 16px; margin-top: 20px;
+}
+
+/* ===== Utilitaires ===== */
+.wrapper{ max-width:1000px; margin:0 auto; }
+.center{ text-align:center; }
+.mt-0{ margin-top:0; }
+
+/* ===== Responsive ===== */
+@media (max-width: 720px){
+  .navbar{ padding: 12px 14px; }
+  .logo img{ width:140px; }
+  .nav-links{ gap:10px; }
+  .hero .hero-content{ flex-direction:column; align-items:flex-start; }
+}
+
+
+
+/* ----styles supplémentaires pour la page projets---- */
+.muted{ color: var(--muted); }
+
+/* Grille */
+.projects-grid{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+  gap: 18px;
+}
+
+/* Carte projet */
+.project-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  display: flex; flex-direction: column;
+}
+.project-cover{
+  width: 100%; height: 160px; object-fit: cover;
+}
+.project-content{ padding: 16px; display:flex; flex-direction:column; gap:10px; }
+
+.tags{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+.tags li{
+  font-size: 12px; padding: 6px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid var(--line);
+}
+
+/* Boutons */
+.project-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 4px; }
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:10px;
+  background: var(--accent); color:white; text-decoration:none; font-weight:600;
+  border: 1px solid color-mix(in oklab, var(--accent) 80%, black);
+}
+.btn:hover{ filter: brightness(1.05); }
+.btn.ghost{
+  background: transparent; color: var(--accent);
+  border: 1px solid var(--accent);
+}
+.btn.subtle{
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid var(--line);
+}
+.btn.disabled{
+  pointer-events:none; opacity:.6; background: var(--accent-soft); color: var(--muted);
+  border: 1px dashed var(--line);
+}
+
+/* image des projets redimensionner */
+.project-cover {
+  width: 100%;
+  height: 190px;              /* ajuste la hauteur que tu veux */
+  object-fit: cover;          /* recadre sans déformer */
+  border-bottom: 1px solid var(--line);
+}
+
+/* animation des objets (bouton, section...)*/
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  transition: all .25s ease;
+}
+
+/* ---- Formations: timeline, certs grid, progress, accordion, checklist ---- */
+
+/* Timeline */
+.timeline{ 
+  list-style:none; margin: 18px 0 0; padding:0; position:relative;
+}
+.timeline::before{
+  content:""; position:absolute; left:14px; top:0; bottom:0;
+  width:2px; background: var(--line);
+}
+.timeline-item{ position:relative; margin: 0 0 22px 0; padding-left:42px; }
+.timeline-dot{
+  position:absolute; left:7px; top:8px;
+  width:16px; height:16px; border-radius:50%;
+  background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.timeline-card.card{ padding:16px; }
+
+/* Certifications grid */
+.certs-grid{
+  margin-top: 14px;
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:18px;
+}
+.cert-card .cert-head{
+  display:flex; align-items:center; gap:10px; margin-bottom:6px;
+}
+.cert-card .cert-head i{ font-size: 20px; color: var(--accent); }
+
+/* Accordion (no JS) */
+.accordion summary{
+  cursor:pointer; padding:10px 0; font-weight:600; color: var(--text);
+  list-style:none;
+}
+.accordion summary::-webkit-details-marker{ display:none; }
+.accordion[open] summary{ color: var(--accent); }
+.accordion > *:not(summary){ margin-left:0; }
+
+/* --- Amélioration visuelle pour les listes déroulantes (accordion) --- */
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none; /* cache le symbole par défaut */
+}
+
+/* petite flèche à droite */
+.accordion summary::after {
+  content: "▾";
+  font-size: 16px;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+/* rotation quand la liste est ouverte */
+.accordion[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Progress bar */
+.progress{
+  width:100%; height:10px; border-radius:999px; background: var(--accent-soft);
+  border:1px solid var(--line); overflow:hidden;
+}
+.progress-bar{
+  height:100%; width: var(--p, 0%); background: var(--accent);
+  transition: width .3s ease;
+}
+
+/* Checklist */
+.checklist{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+.checklist li{ display:flex; align-items:center; gap:10px; }
+.checklist input[type="checkbox"]{ width:18px; height:18px; accent-color: var(--accent); }
+
+/* --- Normalisation cartes 'Formations en cours' --- */
+.projects-grid{
+  align-items: stretch;            /* étire toutes les cartes à la même hauteur de ligne */
+}
+
+.project-card{
+  height: 100%;                    /* prend toute la hauteur dispo dans la grille */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .project-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* pousse la zone d'actions en bas */
+.project-card .project-actions{
+  margin-top: auto;
+}
+
+/* Optionnel : réserver un peu d'espace fixe aux titres & au texte
+   (évite que les retours à la ligne décalent trop les barres) */
+.project-card h3{ min-height: 2.6em; }   /* ~2 lignes max */
+.project-card p.muted{ min-height: 3.2em; }
+
+/* Harmonise l’affichage des tags pour éviter qu’un tag plus haut
+   ne décale la carte */
+.tags li{
+  display: inline-flex;
+  align-items: center;
+  height: 32px;                   /* même hauteur de pastille partout */
+  padding: 0 10px;
+}
+
+/* Progress bar : petite marge pour un alignement constant */
+.progress{ margin: 6px 0 10px; }
+
+/* --- Dropdown compétences (sans JS) --- */
+.skills-dropdown {
+  margin-top: 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.04);
+  overflow: hidden;
+}
+
+/* Bouton d’ouverture */
+.skills-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.skills-dropdown > summary::-webkit-details-marker { display: none; }
+
+/* Petite flèche */
+.skills-dropdown > summary::after{
+  content: "▾";
+  transition: transform .2s ease;
+  font-size: 16px; line-height: 1;
+  color: var(--accent);
+}
+.skills-dropdown[open] > summary::after{ transform: rotate(180deg); }
+
+/* Contenu (tags) */
+.skills-dropdown .tags{
+  padding: 10px 12px 14px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+
+/* Harmonise la hauteur des pastilles */
+.skills-dropdown .tags li{
+  display: inline-flex; align-items:center;
+  height: 32px; padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--line);
+  font-size: 12px;
+}
+
+/* --- Documents (mosaïque) --- */
+.grid-compact{
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+
+.doc-card .doc-head{
+  display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+}
+.doc-icon{
+  width: 44px; height: 44px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent-soft); color: var(--accent);
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  flex: 0 0 44px;
+}
+.doc-icon i{ font-size: 18px; }
+
+/* cartes un peu plus denses pour la mosaïque */
+.doc-card .project-content{ gap: 10px; }
+.doc-card .project-actions{ margin-top: auto; display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Page CONTACT */
+/* ===== Animation d'apparition douce ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.05s;
+}
+
+/* Optionnel : effet progressif sur plusieurs cartes */
+.fade-up:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+
+/*espaces entre les lignes*/
+section h3 {
+  margin-top: 40px;   /* espace avant chaque titre */
+}
+
+.checklist, .tags, p {
+  margin-bottom: 20px; /* espace après les paragraphes / listes */
+}
+

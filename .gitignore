@@ -1,0 +1,60 @@
+# ============================
+#   GÉNÉRAL
+# ============================
+
+# Fichiers système macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fichiers système Windows
+Thumbs.db
+Desktop.ini
+
+# ============================
+#   ÉDITEURS & IDE
+# ============================
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, PhpStorm…)
+.idea/
+
+# ============================
+#   Dépendances & Build
+# ============================
+
+# Node (si tu utilises npm pour minifier le CSS ou compiler tes assets)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+dist/
+build/
+
+# ============================
+#   ENVIRONNEMENT / SÉCURITÉ
+# ============================
+
+# Variables d'environnement
+.env
+.env.*
+.env.local
+.env.production
+
+# ============================
+#   MISC
+# ============================
+
+# Logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.swp
+*.swo
+*.bak
+*.temp
