@@ -140,16 +140,6 @@ footer{
 .center{ text-align:center; }
 .mt-0{ margin-top:0; }
 
-/* ===== Responsive ===== */
-@media (max-width: 720px){
-  .navbar{ padding: 12px 14px; }
-  .logo img{ width:140px; }
-  .nav-links{ gap:10px; }
-  .hero .hero-content{ flex-direction:column; align-items:flex-start; }
-}
-
-
-
 /* ----styles supplémentaires pour la page projets---- */
 .muted{ color: var(--muted); }
 
@@ -442,3 +432,67 @@ section h3 {
   margin-bottom: 20px; /* espace après les paragraphes / listes */
 }
 
+/*responsive*/
+
+/* ===== Responsive mobile ===== */
+@media (max-width: 720px){
+
+  /* 1) Espacements plus petits */
+  section{
+    padding: 28px 14px;
+  }
+
+  /* 2) Navbar plus souple */
+  .navbar{
+    padding: 10px 14px;
+    flex-direction: column;         /* logo au-dessus, liens en dessous */
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .nav-links{
+    flex-wrap: wrap;                /* les liens peuvent passer à la ligne */
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  /* 3) Hero en colonne (tu avais déjà ça, je garde l'idée) */
+  .hero .hero-content{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo-profil{
+    width: 80px;
+    height: 80px;
+  }
+
+  /* 4) Grilles en 1 colonne sur petit écran */
+  .projects-grid,
+  .certs-grid,
+  .grid-compact{
+    grid-template-columns: 1fr;
+  }
+
+  /* 5) Timeline un peu resserrée pour éviter que ça déborde */
+  .timeline::before{
+    left: 10px;
+  }
+  .timeline-item{
+    padding-left: 34px;
+  }
+
+  /* 6) Textes centrés sur certaines sections si tu veux */
+  .projects h2,
+  .projects p.muted{
+    text-align: left;   /* mets "center" si tu préfères tout centrer */
+  }
+}
+
+/*eviter scroll sur le cote sur mobile*/
+
+/* Sécurité : pas de scroll horizontal */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
