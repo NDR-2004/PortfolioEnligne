@@ -72,11 +72,20 @@ header{
 
 /* Sous-menu */
 .dropdown-menu{
-  display:none; position:absolute; top:110%; left:0;
-  background:var(--card); border:1px solid var(--line);
-  border-radius:10px; min-width:210px; padding:8px 0; list-style:none;
+  display:none;
+  position:absolute;
+  top:100%;          /* collé juste sous le bouton */
+  left:0;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  min-width:210px;
+  padding:8px 0;
+  list-style:none;
   box-shadow:0 10px 24px rgba(0,0,0,.08);
+  z-index: 20;       /* pour passer devant le reste si besoin */
 }
+
 .dropdown:hover .dropdown-menu{ display:block; }
 .dropdown-menu li{ padding:2px 6px; }
 .dropdown-menu a{

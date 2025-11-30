@@ -14,18 +14,30 @@
 </head>
 
 <body>
-  <!-- Header / Navigation -->
+  <!-- Navigation -->
   <header>
     <nav class="navbar" aria-label="Navigation principale">
       <h1 class="logo">
-        <a href="index.html" aria-label="Accueil WTF - Welcome To Futur">
-          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur" />
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
         </a>
       </h1>
 
       <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="projets.html" class="active">Projets</a></li>
+
+        <!-- ▼ Menu déroulant à la place de "Projets" -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html" class="active">Projets perso</a></li>
+          </ul>
+        </li>
+
         <li><a href="formations.html">Formations</a></li>
         <li><a href="documents.html">Documents</a></li>
         <li><a href="contact.html">Contacts</a></li>
