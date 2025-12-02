@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculatrice – Projet | Nahem Rigaldies</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <h1 class="logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
+        </a>
+      </h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- ▼ Menu déroulant à la place de "Projets" -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html" class="active">Projets perso</a></li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <h2>Calculatrice</h2>
+          <p>
+            Ce programme exécute une application graphique, 
+            créée avec le framework Avalonia, 
+            pour réaliser une calculatrice visuelle simple.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Détails du projet -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3 class="mt-0">Résumé du projet</h3>
+        <p>
+            Petite calculatrice de bureau permettant d’effectuer des opérations arithmétiques de base.
+        </p>
+        <ul class="checklist">
+          <li><input type="checkbox" checked disabled /> Une fenétre graphique</li>
+          <li><input type="checkbox" checked disabled /> une zone de saisie</li>
+          <li><input type="checkbox" checked disabled /> Des boutons pour écrire les caculs dans la zone de texte</li>
+          <li><input type="checkbox" checked disabled /> Le bouton '=' pour réaliser le calcul et l'afficher dans la zone de texte</li>
+        </ul>
+        <h3>Stack technique</h3>
+        <ul class="tags">
+          <li>C#</li>
+          <li>Avalonia</li>
+          <li>Visual Studio Code</li>
+        </ul>
+        <h3>Architecture</h3>
+        <p class="muted">
+          Le projet est structuré en plusieurs modules :
+        </p>
+        <ul class="checklist">
+          <li><b>App.axaml</b> - Thème global Avalonia</li>
+          <li><b>MainWindow.axaml</b> – Interface graphique (boutons + zone de texte)</li>
+          <li><b>MainWindow.axaml.cs</b> – Logique C# associée à la fenêtre</li>
+          <li><b>Program.cs</b> – Point d’entrée</li>
+          <li><b>CalculatriceCsharp.csproj</b> – Projet .NET</li>
+          <li><b>README.md</b> – Documentation</li>
+
+        </ul>
+
+        <div class="project-actions" style="margin-top:16px;">
+          <a href="https://github.com/NDR-2004/CalculatriceCsharp" target="_blank" rel="noopener noreferrer" class="btn ghost"><i class="fab fa-github"></i>&nbsp;Voir le code source</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie / Aperçu -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3>Captures d’écran</h3>
+        <div class="projects-grid grid-compact">
+          <div class="project-card doc-card">
+            <img src="assets/images/CsharpCalculatrice/imagecalculatrice.png" class="project-cover" alt="Vue interface Calculatrice">
+            <div class="project-content">
+              <p class="muted">image 1</p>
+              <a class="btn ghost" href="assets/images/CsharpCalculatrice/imagecalculatrice.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section apprentissage -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3>Ce que ce projet m’a apporté</h3>
+        <p>
+          L’objectif de ce projet était de me familiariser avec les fondamentaux du développement d’interfaces graphiques en C#.
+          <ul class="checklist">
+            <li><b>•</b> Gestion d’interface graphique (UI)</li>
+            <li><b>•</b> Logique</li>
+            <li><b>•</b> Gestion d’événements</li>
+            <li><b>•</b> Bonne structuration du code</li>
+          </ul>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Nahem Rigaldies – WTF • Welcome To Futur</p>
+  </footer>
+
+  <!-- Script année (mettre à jour dans le js/)-->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

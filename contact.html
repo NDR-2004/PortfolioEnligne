@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nahem Rigaldies</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <h1 class="logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
+        </a>
+      </h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- ▼ Menu déroulant à la place de "Projets" -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html">Projets perso</a></li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="contact.html" class="active">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="assets/images/nahem_photo.jpeg" alt="Photo de Nahem Rigaldies" class="photo-profil">
+        <div>
+          <h2>Mes <span>contacts</span></h2>
+          <p>
+            Besoin d’un renseignement, d’une collaboration ou d’un projet à construire ?
+            Retrouvez ci-dessous tous mes moyens de contact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section>
+      <div class="wrapper contact-layout">
+        <!-- Carte principale -->
+        <div class="card contact-card fade-up">
+          <h3>Me contacter</h3>
+          <p>
+            Basé en <strong>Ardèche</strong>, je suis disponible pour des projets en
+            <strong>réseaux</strong>, <strong>développement</strong>,
+            <strong>data</strong> ou <strong>freelance</strong>.
+          </p>
+
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:nahemdavidrigaldies@gmail.com">nahemdavidrigaldies@gmail.com</a>
+          </div>
+
+          <div class="contact-info-item">
+            <i class="fas fa-location-dot"></i>
+            <span>Ardèche, France</span>
+          </div>
+
+          <div class="contact-info-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Ouvert aux alternances & missions freelance</span>
+          </div>
+
+          <h4>Réseaux & Portfolio</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/nahem-rigaldies-16354b36b" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/NDR-2004" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="projets_encours.html" aria-label="Portfolio photo" target="_blank" rel="noopener noreferrer"><i class="fas fa-camera-retro"></i></a>
+          </div>
+
+          <p class="muted" style="margin-top:10px;">
+            N’hésitez pas à me contacter via e-mail, Instagram ou LinkedIn pour toute question ou proposition.
+          </p>
+        </div>
+
+        <!-- Carte secondaire -->
+        <div class="card contact-card fade-up" style="animation-delay: .15s;">
+          <h3>Informations supplémentaires</h3>
+          <ul class="checklist">
+            <li><input type="checkbox" checked disabled /> Disponible à distance et en présentiel</li>
+            <li><input type="checkbox" checked disabled /> Réponse sous 24 h en moyenne</li>
+            <li><input type="checkbox" checked disabled /> CV & documents disponibles dans la section “Documents”</li>
+          </ul>
+
+          <p class="muted" style="margin-top:10px;">
+            Vous pouvez également me suivre sur les réseaux sociaux, et suivre mes projets open-source et personnels sur GitHub.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Nahem Rigaldies – WTF • Welcome To Futur</p>
+  </footer>
+
+  <!-- Script année -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

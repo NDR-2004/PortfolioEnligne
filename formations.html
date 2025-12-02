@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formations | Nahem Rigaldies</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <h1 class="logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
+        </a>
+      </h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- ▼ Menu déroulant à la place de "Projets" -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html">Projets perso</a></li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html" class="active">Formations</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content container">
+        <img src="assets/images/nahem_photo.jpeg" alt="Photo de Nahem Rigaldies" class="photo-profil">
+        <div>
+          <h2>Mon <span>parcours de formation</span></h2>
+          <p>Voici mon cheminement scolaire, mes formations en cours/réalisées et mes certifications.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours scolaire (timeline) -->
+    <section class="container">
+    <h2>Parcours scolaire</h2>
+
+    <!-- BTS SISR Cned -->
+    <ol class="timeline">
+        <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card card">
+            <h3>BTS SIO – Option SISR (à distance)</h3>
+            <p class="muted">2025 – en cours • CNED</p>
+
+            <!-- Liste déroulante des compétences -->
+            <details class="skills-dropdown">
+            <summary>Compétences</summary>
+            <ul class="tags">
+                <li>Architecture Ordinateur</li>
+                <li>C#</li>
+                <li>GitHub</li>
+                <li>GLPI</li>
+                <li>OCS</li>
+                <li>Virtualisation</li>
+                <li>Sauvegardes</li>
+                <!-- ... -->
+            </ul>
+            </details>
+
+            <!-- Liste déroulante des modules -->
+            <details class="accordion">
+            <summary>Modules clés / travaux</summary>
+            <ul class="muted">
+                <li>Achitecture ordinateur : carte mère, CPU, RAM, ROM, BUS, fréquence, débit, PCI, SATA</li>
+                <li>C# : variables, boucles, conditions, méthodes, classes, POO, collections, proprités de classe</li>
+                <li>GLPI : gestion des tickets d'incidents (post-only, admin, self-service...)</li>
+                <li>OCS : gestion du parc informatique (orditnateur, lieu, entité...)</li>
+                <li>Virtualisation : Hyperviseur (1 & 2), image (Ubuntu, Debian, Windows...), Docker (conteneur-d'App), snapshot</li>
+                <li>Sauvegarde : Windows Server, création de disque (c:, z:...), sauvegarde totale, incrémentale, diférentielle</li>
+            </ul>
+            </details>
+        </div>
+        </li>
+
+        <!-- Bachelor IA School-->
+        <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card card">
+            <h3>Bachelor – Science des données et IA</h3>
+            <p class="muted">2024 – 2025 • IA School</p>
+
+            <!-- Liste déroulante des compétences -->
+            <details class="skills-dropdown">
+            <summary>Compétences</summary>
+            <ul class="tags">
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>Numpy</li>
+                <li>Seaborn</li>
+                <li>SQL "MySQL"</li>
+                <li>Math pour l'informatique</li>
+                <li>Statistiques</li>
+                <li>Business</li>
+                <li>Droits du numérique</li>
+                <li>Scraping avec python "BeautifulSoup</li>
+                <!-- ... -->
+            </ul>
+            </details>
+
+            <!-- Liste déroulante des modules -->
+            <details class="accordion">
+            <summary>Modules clés / travaux</summary>
+            <ul class="muted">
+                <li>Python : variables, conditions, boucles, collections, classes/POO</li>
+                <li>Pandas, Numpy et Seaborn : analyse/traitement de données, création de graphique</li>
+                <li>SQL : gestion de BDD relationelle, SELECT, INSERT, ALTER, DELETE, CASE</li>
+                <li>Scraping : capable de récupérer données sur site static et non dynamique et stockage dans une BDD</li>
+                <li>Business et droit du numérique : gestion/création/règlementation de l'activité d'une entreprise technologique</li>
+            </ul>
+            </details>
+        </div>
+        </li>
+
+        <!-- BTS Immobilier -->
+        <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card card">
+            <h3>BTS Immobilier</h3>
+            <p class="muted">2022 - 2024 • SUPEXUP</p>
+
+            <!-- Liste déroulante des compétences -->
+            <details class="skills-dropdown">
+            <summary>Compétences</summary>
+            <ul class="tags">
+                <li>Gestion locative</li>
+                <li>Transaction immobilière</li>
+                <li>Gestion de copropriété</li>
+                <li>Droit immobilier</li>
+                <li>Fiscalité immobilière</li>
+                <li>Urbanisme</li>
+                <!-- ... -->
+            </ul>
+            </details>
+
+            <!-- Liste déroulante des modules -->
+            <details class="accordion">
+            <summary>Modules clés / travaux</summary>
+            <ul class="muted">
+                <li>Transaction : négociation, vente, estimation</li>
+                <li>Location : mise en location</li>
+                <li>Droit : gestion des litiges, impayés, contrat de location/vente</li>
+                <li>Fiscalité : taxes, impôts, plus value, abattement</li>
+            </ul>
+            </details>
+        </div>
+        </li>
+
+        <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card card">
+            <h3>Baccalauréat – Commerce</h3>
+            <p class="muted">2019 – 2022 · Lycée Marie Rivier</p>
+
+            <!-- Liste déroulante des compétences -->
+            <details class="skills-dropdown">
+            <summary>Compétences</summary>
+            <ul class="tags">
+                <li>Vente</li>
+                <li>Marketing</li>
+                <li>Gestion de la fidélisation client</li>
+                <li>Droit économique</li>
+                <li>Histoire/géographie</li>
+                <li>Anglais/espagnol niveau lycée</li>
+                <!-- ... -->
+            </ul>
+            </details>
+
+            <!-- Liste déroulante des modules -->
+            <details class="accordion">
+            <summary>Modules clés / travaux</summary>
+            <ul class="muted">
+                <li>Vente : face à face, techniques de vente, facing</li>
+                <li>Marketing : étude de marché, prospection, gamme produit, positionnement</li>
+                <li>Gestion de la fidélisation client : gestion de la clientéle</li>
+            </ul>
+            </details>
+        </div>
+        </li>
+    </ol>
+    </section>
+
+    <!-- Formations hors scolaires -->
+    <section class="container">
+      <h2>Formations hors scolaire</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-content">
+            <h3>CCNA 1 • Formation Youtube</h3>
+            <p class="muted">Préparation aux fondamentaux type CCNA : adressage, VLAN, ACL, NAT, Wi-Fi, sécurité.</p>
+            <ul class="tags">
+              <li>CCNA-like</li>
+              <li>Firewall</li>
+              <li>VLAN/ACL</li>
+            </ul>
+            <div class="progress">
+              <div class="progress-bar" style="--p:15%"></div>
+            </div>
+            <div class="project-actions">
+              <a class="btn ghost" href="https://www.youtube.com/watch?v=OKXlgAPVJ8Y&list=PLm-fXAJYCnC6DMwEv5cLC25BaL7z75YuW" target="_blank" rel="noopener">Youtube</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3>Python & Data sur Udemy</h3>
+            <p class="muted">Pandas → NumPy → Stats → Visualisation → petits scripts d’automatisation.</p>
+            <ul class="tags">
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>Interface graphique</li>
+              <li>IA, ML, DL</li>
+            </ul>
+            <div class="progress">
+              <div class="progress-bar" style="--p:55%"></div>
+            </div>
+            <div class="project-actions">
+              <a class="btn ghost" href="https://github.com/NDR-2004" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+    </section>
+
+    <!-- Formations récentes réalisées -->
+    <section class="container">
+      <h2>Formations récentes réalisées 2025-2026</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-content">
+            <h3>Formation C#</h3>
+            <p class="muted">Fait sur Youtube</p>
+            <ul class="tags"><li>Variables</li><li>Types</li><li>Conditions</li><li>POO</li></ul>
+            <div class="project-actions">
+                <a class="btn ghost" href="docs/formationCsharpyoutube.pdf" target="_blank" rel="noopener noreferrer">Badges</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3>Cours Algèbre linéaire Matrice</h3>
+            <p class="muted">Fait sur Youtube</p>
+            <ul class="tags"><li>Opération</li><li>Système</li><li>Équation</li><li>Inverse</li></ul>
+            <div class="project-actions">
+                <a class="btn ghost" href="docs/MatriceYtbBadge.JPG" target="_blank" rel="noopener noreferrer">Badges</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-content">
+            <h3>GitHub</h3>
+            <p class="muted">Fait sur Youtube</p>
+            <ul class="tags"><li>Git</li><li>Versionning</li><li>Collaboration</li></ul>
+            <div class="project-actions">
+                <a class="btn ghost" href="docs/certificatyoutubegithub.pdf" target="_blank" rel="noopener noreferrer">Badges</a>
+            </div>
+          </div>
+        </article>
+    </section>
+
+    <!-- Certifications -->
+    <section class="container">
+    <h2>Certifications</h2>
+
+    <div class="certs-grid">
+        <article class="card cert-card">
+        <div class="cert-head">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Data Analyst</h3>
+        </div>
+        <p class="muted">2024 · Coursera</p>
+        <ul class="tags">
+            <li>Traitement</li><li>Analyse de données</li>
+        </ul>
+        </article>
+
+        <article class="card cert-card">
+        <div class="cert-head">
+            <i class="fa-solid fa-database"></i>
+            <h3>IA Essential</h3>
+        </div>
+        <p class="muted">2024 · Coursera</p>
+        <ul class="tags">
+            <li>SQL</li><li>Base de données</li>
+        </ul>
+        </article>
+
+        <article class="card cert-card">
+        <div class="cert-head">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>GitHub</h3>
+        </div>
+        <p class="muted">2025 · Youtube</p>
+        <ul class="tags">
+            <li>Git</li><li>Versionning</li><li>Collaboration</li>
+        </ul>
+        </article>
+    </div>
+
+    <!-- Bouton global -->
+    <div style="margin-top: 24px;">
+        <a class="btn" href="documents.html">Voir plus de certifications</a>
+    </div>
+    </section>
+    <!-- Pied de page -->
+    <footer>
+      <p>© <span id="year"></span> Nahem Rigaldies – WTF • Welcome To Futur</p>
+    </footer>
+  </main>
+</body>
+</html>

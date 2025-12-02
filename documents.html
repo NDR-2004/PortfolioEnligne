@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documents | Nahem Rigaldies</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <h1 class="logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
+        </a>
+      </h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+
+        <!-- ▼ Menu déroulant à la place de "Projets" -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html">Projets perso</a></li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="documents.html" class="active">Documents</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content container">
+        <img src="assets/images/nahem_photo.jpeg" alt="Photo de Nahem Rigaldies" class="photo-profil">
+        <div>
+          <h2>Mes <span>documents</span></h2>
+          <p>Téléchargez mon CV, ma lettre de motivation, mes certificats et autres pièces.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section prioritaire : CV + Lettre -->
+    <section class="container">
+      <h2>Prioritaires</h2>
+      <div class="projects-grid grid-compact">
+        <!-- CV -->
+        <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-file-lines"></i></span>
+              <div>
+                <h3>Curriculum Vitae</h3>
+                <p class="muted">PDF · Dernière maj : 2025-10-28</p>
+              </div>
+            </div>
+            <ul class="tags">
+              <li>CV</li><li>Profil</li><li>Alternance</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/CV_STAGE.pdf" download>Télécharger</a>
+              <a class="btn ghost" href="docs/CV_STAGE.pdf" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lettre de motivation -->
+        <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-file-lines"></i></span>
+              <div>
+                <h3>Lettre de motivation</h3>
+                <p class="muted">PDF · Version générique personnalisable</p>
+              </div>
+            </div>
+            <ul class="tags">
+              <li>LM</li><li>Alternance</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/lettredemotivationgenerale.pdf" download>Télécharger</a>
+              <a class="btn ghost" href="docs/lettredemotivationgenerale.pdf" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mosaïque : autres documents -->
+    <section class="container">
+      <h2>Toutes les pièces</h2>
+      <div class="projects-grid">
+
+        <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-shield-halved"></i></span>
+              <div>
+                <h3>C#</h3>
+                <p class="muted">2025 · Youtube</p>
+              </div>
+            </div>
+            <ul class="tags"><li>Compilation</li><li>Dotnet run</li></ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/formationCsharpyoutube.pdf" download>Télécharger</a>
+            </div>
+          </div>
+        </article>
+
+       <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-shield-halved"></i></span>
+              <div>
+                <h3>Cours sur les Matrices</h3>
+                <p class="muted">2025 · Youtube</p>
+              </div>
+            </div>
+            <ul class="tags"><li>Calcul</li><li>Algèbre linéaire</li></ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/MatriceYtbBadge.JPG" download>Télécharger</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-database"></i></span>
+              <div>
+                <h3>GitHub</h3>
+                <p class="muted">2025 · Youtube</p>
+              </div>
+            </div>
+            <ul class="tags"><li>Git</li><li>Git push -u origin main</li></ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/certificatyoutubegithub.pdf" download>Télécharger</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card doc-card">
+          <div class="project-content">
+            <div class="doc-head">
+              <span class="doc-icon"><i class="fa-solid fa-network-wired"></i></span>
+              <div>
+                <h3>Data Analyst</h3>
+                <p class="muted">Google · Coursera</p>
+              </div>
+            </div>
+            <ul class="tags"><li>Visualisation</li><li>Interprétation</li></ul>
+            <div class="project-actions">
+              <a class="btn" href="docs/certificat_introduction_data_analyst.pdf" download>Télécharger</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ajoute autant de cartes que nécessaire -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Nahem Rigaldies – WTF • Welcome To Futur</p>
+  </footer>
+</body>
+</html>

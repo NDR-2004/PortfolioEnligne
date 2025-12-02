@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photographie – WTF</title>
+    <link rel="stylesheet" href="assets/css/stylePhoto.css">
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header>
+        <nav class="navbar" aria-label="Navigation principale">
+            <h1 class="logo">
+            <a href="index.html" aria-label="Accueil">
+                <img src="assets/images/assetsphoto/LogoPhotographe.png" alt="Logo WTF - Welcome To Futur">
+            </a>
+            </h1>
+
+            <ul class="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#boutique">Boutique</a></li>
+            <li><a href="#bio">Biographie</a></li>
+            <li><a href="#voyage">Voyage</a></li>
+            <li><a href="#blog-voyage">Blog voyage</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- HERO PHOTO AVEC LA VIDÉO CANVA -->
+        <section class="photo-hero">
+        <div class="photo-hero-inner container">
+            <div class="photo-hero-text">
+            <h2>Photographie & voyages</h2>
+            <p>
+                Je suis Nahem, passionné par les paysages, les routes perdues et la lumière naturelle.
+                Ici, je partage mes photos de voyage et d’aventure, sans pression, juste pour le plaisir.
+            </p>
+            <p class="muted">
+                Avec le temps, certaines images seront proposées à la vente en tirages ou en fichiers HD.
+            </p>
+            <a href="#galerie" class="btn">Découvrir la galerie</a>
+            </div>
+
+            <div class="photo-hero-media">
+            <video autoplay loop muted playsinline class="hero-video">
+                <!-- Mets ton export Canva ici -->
+                <source src="videos/portfolio-photo.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+        </section>
+
+        <!-- GALERIE PHOTO -->
+        <section id="galerie">
+            <div class="container">
+                <h3>Galerie de paysages</h3>
+                <p class="muted">
+                Une sélection de photos : mer, montagne, routes, nature…
+                </p>
+
+                <div class="photo-grid">
+                    <figure class="photo-card">
+                        <img src="assets/images/assetsphoto/lune.png" alt="Lune - Nuit">
+                        <figcaption>
+                            <h4>Lune</h4>
+                            <p class="caption-muted">Bourg St Andéol France – 2024</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="assets/images/assetsphoto/pompier.png" alt="Pompier - N&G">
+                        <figcaption>
+                            <h4>Pompier</h4>
+                            <p class="caption-muted">Montpellier France – 2024</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="assets/images/assetsphoto/papillon.png" alt="Papillon - Nature">
+                        <figcaption>
+                            <h4>Papillon</h4>
+                            <p class="caption-muted">Montpellier France – 2024</p>
+                        </figcaption>
+                    </figure>                   
+                </div>
+            </div>
+        </section>
+
+        <!-- MINI BOUTIQUE (TEASER) -->
+        <section id="boutique">
+            <div class="container">
+                <h3>Mini boutique (bientôt)</h3>
+                <p class="muted">
+                À terme, certaines photos seront disponibles en tirages ou en téléchargement haute définition.
+                Pour l’instant, je construis les séries et l’univers visuel.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 – WTF / Nahem – Photographie & Voyages</p>
+    </footer>
+</body>
+</html>
