@@ -74,7 +74,7 @@ header{
 .dropdown-menu{
   display:none;
   position:absolute;
-  top:100%;          /* collé juste sous le bouton */
+  top:100%;
   left:0;
   background:var(--card);
   border:1px solid var(--line);
@@ -83,15 +83,30 @@ header{
   padding:8px 0;
   list-style:none;
   box-shadow:0 10px 24px rgba(0,0,0,.08);
-  z-index: 20;       /* pour passer devant le reste si besoin */
+  z-index: 20;
 }
 
-.dropdown:hover .dropdown-menu{ display:block; }
-.dropdown-menu li{ padding:2px 6px; }
-.dropdown-menu a{
-  display:block; padding:10px 14px; border-radius:8px; color:var(--text);
+.dropdown-menu li{
+  padding:2px 6px;
 }
-.dropdown-menu a:hover{ background:var(--accent-soft); color:var(--accent); }
+
+.dropdown-menu a{
+  display:block;
+  padding:10px 14px;
+  border-radius:8px;
+  color:var(--text);
+}
+
+.dropdown-menu a:hover{
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+
+/* Ouvrir le menu (desktop + mobile) */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu{
+  display:block;
+}
 
 /* ===== Sections ===== */
 section{ padding: 40px 16px; }
