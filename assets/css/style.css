@@ -56,18 +56,32 @@ header{
 }
 
 /* Liens de nav */
+/* Liens de nav */
 .nav-links{
-  list-style:none; display:flex; gap: 18px; margin:0; padding:0;
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;           /* ⬅️ permet de s'empiler si ça ne tient pas */
 }
-.nav-links li{ position:relative; }
+
+.nav-links li{
+  position: relative;
+}
+
 .nav-links a{
-  display:inline-block;
-  padding:8px 12px; border-radius:999px;
-  color:var(--text); font-weight:600;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  font-weight: 600;
 }
+
 .nav-links a:hover,
 .nav-links a.active{
-  background:var(--accent-soft); color:var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* Sous-menu */
@@ -481,29 +495,19 @@ section h3 {
   }
 
   /* 3) MENU : une seule ligne qui SCROLL à l’horizontale */
+  /* 3) MENU : s'empile simplement sur plusieurs lignes */
   .nav-links{
     width: 100%;
     margin: 0;
     padding: 0;
-
     display: flex;
-    flex-wrap: nowrap;          /* une seule ligne */
-    white-space: nowrap;
-    overflow-x: auto;           /* scroll horizontal */
-    overflow-y: visible;        /* ⬅️ on laisse sortir le dropdown */
-
+    flex-wrap: wrap;        /* ⬅️ autorise les retours à la ligne */
     gap: 8px;
     font-size: 14px;
-
-    scrollbar-width: none;
   }
-  .nav-links::-webkit-scrollbar{
-    display: none;
-  }
-
 
   .nav-links li{
-    flex: 0 0 auto;             /* chaque onglet garde sa largeur */
+    flex: 0 0 auto;
   }
 
   .nav-links a{
