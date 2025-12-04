@@ -102,10 +102,16 @@ header{
   color:var(--accent);
 }
 
-/* Ouvrir le menu (desktop + mobile) */
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu{
+/* Ouverture quand la classe .open est présente */
+.dropdown.open .dropdown-menu{
   display:block;
+}
+
+/* Optionnel : sur PC, on peut aussi l'ouvrir au survol */
+@media (hover:hover){
+  .dropdown:hover .dropdown-menu{
+    display:block;
+  }
 }
 
 /* ===== Sections ===== */
