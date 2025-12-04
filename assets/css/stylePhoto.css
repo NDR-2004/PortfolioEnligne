@@ -333,6 +333,7 @@ footer{
    RESPONSIVE
    ========================== */
 
+/* Écran jusqu'à 820px : texte + vidéo CÔTE À CÔTE */
 @media (max-width: 820px){
 
   .navbar{
@@ -345,31 +346,32 @@ footer{
     width: 130px;
   }
 
-  /* Menu plus compact pour éviter une grosse hauteur */
-  .nav-links{
-    width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 8px;
-    padding-bottom: 4px;
+  /* On garde le flex en ligne */
+  .photo-hero-inner{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
   }
 
-  .nav-links li{
-    flex: 0 0 auto;
+  .photo-hero-text,
+  .photo-hero-media{
+    flex: 1 1 50%;
   }
 
-  .nav-links a{
-    font-size: 13px;
-    padding: 6px 10px;
+  .photo-hero-media{
+    order: 0;   /* on enlève le changement d’ordre */
   }
+}
+
+/* Très petits écrans : là on empile pour ne pas tout tasser */
+@media (max-width: 480px){
 
   .photo-hero-inner{
     flex-direction: column;
   }
 
   .photo-hero-media{
-    order: -1;     /* vidéo au-dessus du texte sur mobile */
+    order: -1;  /* vidéo au-dessus du texte uniquement sur très petit écran */
   }
 }
 
