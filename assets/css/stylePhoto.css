@@ -333,6 +333,7 @@ footer{
    RESPONSIVE
    ========================== */
 
+/* Écran jusqu'à 820px : texte + vidéo CÔTE À CÔTE */
 @media (max-width: 820px){
 
   .navbar{
@@ -345,14 +346,19 @@ footer{
     width: 130px;
   }
 
-  /* Menu plus compact pour éviter une grosse hauteur */
+  /* MENU DÉROULANT HORIZONTAL */
   .nav-links{
     width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;         /* pas de retour à la ligne */
+    overflow-x: auto;          /* scroll horizontal */
     white-space: nowrap;
-    gap: 8px;
-    padding-bottom: 4px;
+    gap: 10px;
+    padding-bottom: 6px;
+    scrollbar-width: none;     /* Firefox : cache la barre */
+  }
+  .nav-links::-webkit-scrollbar{
+    display: none;             /* Safari / Chrome mobile */
   }
 
   .nav-links li{
@@ -360,16 +366,45 @@ footer{
   }
 
   .nav-links a{
-    font-size: 13px;
-    padding: 6px 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.05);
   }
+
+  .nav-links a.active,
+  .nav-links a:hover{
+    background: rgba(14,165,233,0.18);
+    border-color: rgba(34,197,94,0.6);
+  }
+
+  /* On garde le flex en ligne */
+  .photo-hero-inner{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .photo-hero-text,
+  .photo-hero-media{
+    flex: 1 1 50%;
+  }
+
+  .photo-hero-media{
+    order: 0;   /* on enlève le changement d’ordre */
+  }
+}
+
+/* Très petits écrans : là on empile pour ne pas tout tasser */
+@media (max-width: 480px){
 
   .photo-hero-inner{
     flex-direction: column;
   }
 
   .photo-hero-media{
-    order: -1;     /* vidéo au-dessus du texte sur mobile */
+    order: -1;  /* vidéo au-dessus du texte uniquement sur très petit écran */
   }
 }
 
