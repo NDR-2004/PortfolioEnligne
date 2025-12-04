@@ -480,26 +480,27 @@ section h3 {
     gap: 6px;
   }
 
-  /* 3) MENU : une seule ligne qui SCROLL à l’horizontale */
-  .nav-links{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+/* 3) MENU : une seule ligne qui SCROLL à l’horizontale */
+.nav-links{
+  width: 100%;
+  margin: 0;
+  padding: 0;
 
-    display: flex;
-    flex-wrap: nowrap;          /* une seule ligne */
-    white-space: nowrap;
-    overflow-x: auto;           /* scroll horizontal */
-    overflow-y: hidden;
+  display: flex;
+  flex-wrap: nowrap;          /* une seule ligne */
+  white-space: nowrap;
+  overflow-x: auto;           /* scroll horizontal */
+  overflow-y: visible;        /* ⬅️ on laisse sortir le dropdown */
 
-    gap: 8px;
-    font-size: 14px;
+  gap: 8px;
+  font-size: 14px;
 
-    scrollbar-width: none;      /* Firefox : cache la barre */
-  }
-  .nav-links::-webkit-scrollbar{
-    display: none;              /* Safari / Chrome mobile */
-  }
+  scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar{
+  display: none;
+}
+
 
   .nav-links li{
     flex: 0 0 auto;             /* chaque onglet garde sa largeur */
