@@ -140,8 +140,18 @@ header{
   display: flex;
   gap: 12px;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: flex-end;
+
+  /* toujours sur une seule ligne */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+
+  /* scroll horizontal si ça dépasse */
+  overflow-x: auto;
+  scrollbar-width: none;          /* Firefox */
+}
+.nav-links::-webkit-scrollbar{
+  display: none;                  /* Safari / Chrome */
 }
 
 .nav-links li{
@@ -347,38 +357,7 @@ footer{
   }
 
   /* MENU DÉROULANT HORIZONTAL */
-  .nav-links{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;         /* pas de retour à la ligne */
-    overflow-x: auto;          /* scroll horizontal */
-    white-space: nowrap;
-    gap: 10px;
-    padding-bottom: 6px;
-    scrollbar-width: none;     /* Firefox : cache la barre */
-  }
-  .nav-links::-webkit-scrollbar{
-    display: none;             /* Safari / Chrome mobile */
-  }
-
-  .nav-links li{
-    flex: 0 0 auto;
-  }
-
-  .nav-links a{
-    padding: 8px 14px;
-    font-size: 14px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.05);
-  }
-
-  .nav-links a.active,
-  .nav-links a:hover{
-    background: rgba(14,165,233,0.18);
-    border-color: rgba(34,197,94,0.6);
-  }
-
+  
   /* On garde le flex en ligne */
   .photo-hero-inner{
     flex-direction: row;
