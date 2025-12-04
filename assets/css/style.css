@@ -451,21 +451,45 @@ section h3 {
     padding: 28px 14px;
   }
 
-  /* 2) Navbar plus souple */
+  /* 2) Navbar : logo au-dessus, menu en dessous */
   .navbar{
     padding: 10px 14px;
-    flex-direction: column;         /* logo au-dessus, liens en dessous */
+    flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
 
+  /* 3) MENU : une seule ligne qui SCROLL à l’horizontale */
   .nav-links{
-    flex-wrap: wrap;                /* les liens peuvent passer à la ligne */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: nowrap;          /* une seule ligne */
+    white-space: nowrap;
+    overflow-x: auto;           /* scroll horizontal */
+    overflow-y: hidden;
+
     gap: 8px;
     font-size: 14px;
+
+    scrollbar-width: none;      /* Firefox : cache la barre */
+  }
+  .nav-links::-webkit-scrollbar{
+    display: none;              /* Safari / Chrome mobile */
   }
 
-  /* 3) Hero en colonne (tu avais déjà ça, je garde l'idée) */
+  .nav-links li{
+    flex: 0 0 auto;             /* chaque onglet garde sa largeur */
+  }
+
+  .nav-links a{
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* 4) Hero en colonne */
   .hero .hero-content{
     flex-direction: column;
     align-items: flex-start;
@@ -476,14 +500,14 @@ section h3 {
     height: 80px;
   }
 
-  /* 4) Grilles en 1 colonne sur petit écran */
+  /* 5) Grilles en 1 colonne sur petit écran */
   .projects-grid,
   .certs-grid,
   .grid-compact{
     grid-template-columns: 1fr;
   }
 
-  /* 5) Timeline un peu resserrée pour éviter que ça déborde */
+  /* 6) Timeline un peu resserrée */
   .timeline::before{
     left: 10px;
   }
@@ -491,17 +515,8 @@ section h3 {
     padding-left: 34px;
   }
 
-  /* 6) Textes centrés sur certaines sections si tu veux */
   .projects h2,
   .projects p.muted{
-    text-align: left;   /* mets "center" si tu préfères tout centrer */
+    text-align: left;
   }
-}
-
-/*eviter scroll sur le cote sur mobile*/
-
-/* Sécurité : pas de scroll horizontal */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
