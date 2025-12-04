@@ -42,11 +42,9 @@ body{
   color: var(--text);
   line-height: 1.6;
 
-  /* Mise en page pour que le footer colle en bas */
   display: flex;
   flex-direction: column;
 
-  /* Fond bleu / vert bien vif */
   background:
     radial-gradient(circle at top left, rgba(34,197,94,0.4), transparent 55%),
     radial-gradient(circle at bottom right, rgba(14,165,233,0.4), transparent 55%),
@@ -133,14 +131,13 @@ header{
   height: auto;
 }
 
-/* Liens */
+/* Liens desktop */
 
 .nav-links{
   list-style: none;
   display: flex;
   gap: 12px;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: flex-end;
 }
 
@@ -241,7 +238,7 @@ section{
    ========================== */
 
 #galerie{
-  padding-top: 16px;         /* proche du hero */
+  padding-top: 16px;
   padding-bottom: 26px;
 }
 
@@ -251,8 +248,6 @@ section{
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 14px;
 }
-
-/* Carte photo */
 
 .photo-card{
   position: relative;
@@ -265,7 +260,8 @@ section{
   flex-direction: column;
 }
 
-/* Toutes les images = même proportion pour un rendu propre */
+/* mêmes proportions pour toutes les vignettes */
+
 .photo-card img{
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -333,8 +329,8 @@ footer{
    RESPONSIVE
    ========================== */
 
-/* Écran jusqu'à 820px : texte + vidéo CÔTE À CÔTE */
-/* MENU DÉROULANT HORIZONTAL SUR MOBILE */
+/* 1) Jusqu'à 820px : menu horizontal défilant, hero toujours côte à côte */
+
 @media (max-width: 820px){
 
   .navbar{
@@ -348,25 +344,23 @@ footer{
     width: 130px;
   }
 
-  /* MENU défilant horizontal */
+  /* MENU DÉROULANT HORIZONTAL */
   .nav-links{
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;         /* NE PAS passer à la ligne */
-    overflow-x: auto;          /* Scroll horizontal */
-    white-space: nowrap;       /* Garde les éléments en ligne */
+    flex-wrap: nowrap;         /* pas de retour à la ligne */
+    overflow-x: auto;          /* scroll horizontal */
+    white-space: nowrap;
     gap: 10px;
     padding-bottom: 6px;
-
-    /* Cache la scrollbar sur iPhone & navigateur moderne */
-    scrollbar-width: none;     /* Firefox */
+    scrollbar-width: none;     /* Firefox : cache la barre */
   }
   .nav-links::-webkit-scrollbar{
     display: none;             /* Safari / Chrome mobile */
   }
 
   .nav-links li{
-    flex: 0 0 auto;            /* chaque élément garde sa taille */
+    flex: 0 0 auto;
   }
 
   .nav-links a{
@@ -382,19 +376,25 @@ footer{
     background: rgba(14,165,233,0.18);
     border-color: rgba(34,197,94,0.6);
   }
-}
 
-/* Très petits écrans : là on empile pour ne pas tout tasser */
-@media (max-width: 480px){
-
+  /* HERO : garder texte + vidéo côte à côte */
   .photo-hero-inner{
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .photo-hero-text,
+  .photo-hero-media{
+    flex: 1 1 50%;
   }
 
   .photo-hero-media{
-    order: -1;  /* vidéo au-dessus du texte uniquement sur très petit écran */
+    order: 0;
   }
 }
+
+/* 2) Jusqu'à 600px : typographie + espacements un peu réduits */
 
 @media (max-width: 600px){
 
@@ -436,5 +436,18 @@ footer{
 
   footer{
     padding: 10px 0 14px;
+  }
+}
+
+/* 3) Très petits écrans < 480px : hero empilé pour respirer */
+
+@media (max-width: 480px){
+
+  .photo-hero-inner{
+    flex-direction: column;
+  }
+
+  .photo-hero-media{
+    order: -1;   /* vidéo au-dessus du texte */
   }
 }
