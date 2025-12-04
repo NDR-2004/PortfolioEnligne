@@ -13,12 +13,14 @@ function openFile(url) {
   window.open(url, '_blank');
 }
 
-// menu déroulant
-document.addEventListener('DOMContentLoaded', function () {
-  const dropdown = document.querySelector('.dropdown');
-  const btn = dropdown?.querySelector('.dropbtn');
+// --- Menu déroulant "Pro" ---
 
-  if (!btn || !dropdown) return;
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdown = document.querySelector('.dropdown');
+  if (!dropdown) return;
+
+  var btn = dropdown.querySelector('.dropbtn');
+  if (!btn) return;
 
   // Ouvre / ferme le menu au clic sur "Pro"
   btn.addEventListener('click', function (e) {
@@ -28,10 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Ferme le menu si on clique ailleurs
   document.addEventListener('click', function (e) {
+    // si on clique en dehors du dropdown, on ferme
     if (!dropdown.contains(e.target)) {
       dropdown.classList.remove('open');
     }
   });
 });
+
 
 
