@@ -335,81 +335,103 @@ footer{
 }
 
 /* =========================
-   1) ESPACEMENT ENTRE SECTIONS
+   1) FOND / DÉGRADÉ PLUS PROPRE
    ========================== */
 
-/* Même logique de padding pour toutes les sections */
-section {
-  padding-block: 28px; /* haut + bas = 28px */
-}
+/* On laisse le body comme il est, et on ajoute un calque fixe derrière */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 
-/* On ajuste un peu les sections qui en avaient déjà */
-.photo-hero {
-  padding-block: 28px;
-}
-
-#galerie,
-#boutique {
-  padding-block: 24px;
+  /* Dégradé ancré à l'écran, donc il ne se "déplace" plus quand on scrolle */
+  background:
+    radial-gradient(circle at top left, #22c55e33, transparent 55%),
+    radial-gradient(circle at bottom right, #06b6d433, transparent 55%),
+    var(--bg);
 }
 
 /* =========================
-   2) VERSION MOBILE : RÉDUIRE LES VIDES
+   2) VIGNETTES DE PHOTOS UNIFORMES
    ========================== */
-@media (max-width: 700px) {
 
-  /* Réduire la hauteur visuelle du header (évite l'effet "énorme bloc" en haut) */
-  .navbar {
-    padding: 8px 12px;
-    gap: 6px;
+/* On force toutes les images de la grille à la même proportion + recadrage */
+.photo-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-card img{
+  width: 100%;
+  /* même hauteur pour toutes les photos, on recadre proprement */
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+
+/* =========================
+   3) ESPACEMENT ENTRE LES BLOCS
+   ========================== */
+
+/* Base : réduire un peu partout */
+section{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Hero : un peu moins de marge en bas pour coller la galerie */
+.photo-hero{
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
+
+/* Galerie : quasi collée au hero */
+#galerie{
+  padding-top: 6px;
+  padding-bottom: 22px;
+}
+
+/* Boutique : un peu plus léger aussi */
+#boutique{
+  padding-top: 18px;
+  padding-bottom: 22px;
+}
+
+/* Footer un peu plus fin */
+footer{
+  padding: 10px 0 16px;
+}
+
+/* Version mobile : on compacte encore plus */
+@media (max-width: 700px){
+
+  section{
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
-  .logo img {
-    width: 120px;
+  .photo-hero{
+    padding-top: 16px;
+    padding-bottom: 6px;
   }
 
-  /* Empêcher le menu de passer sur 3 lignes : on garde 1 seule ligne scrollable */
-  .nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
+  #galerie{
+    padding-top: 4px;
+    padding-bottom: 16px;
+  }
+
+  #boutique{
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+
+  .photo-hero-inner{
+    gap: 12px;
+  }
+
+  .photo-grid{
     gap: 10px;
-    width: 100%;
-  }
-
-  .nav-links li {
-    flex: 0 0 auto;
-  }
-
-  .nav-links a {
-    padding: 6px 10px;
-    font-size: 13px;
-  }
-
-  /* Réduire les espaces verticaux globaux */
-  section {
-    padding-block: 18px;
-  }
-
-  .photo-hero {
-    padding-block: 18px;
-  }
-
-  #galerie,
-  #boutique {
-    padding-block: 16px;
-  }
-
-  .photo-hero-inner {
-    gap: 14px;
-  }
-
-  .photo-grid {
-    gap: 10px;
-  }
-
-  footer {
-    padding: 10px 0 14px;
   }
 }
