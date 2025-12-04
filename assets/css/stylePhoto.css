@@ -133,15 +133,15 @@ header{
   height: auto;
 }
 
-/* Liens */
+/* ===== NAV LINKS (desktop par défaut) ===== */
 
 .nav-links{
   list-style: none;
   display: flex;
   gap: 12px;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: flex-end;
+  flex-wrap: nowrap;     /* une seule ligne sur grand écran */
 }
 
 .nav-links li{
@@ -333,43 +333,73 @@ footer{
    RESPONSIVE
    ========================== */
 
+/* Écran jusqu'à 820px : menu scroll + hero côte à côte */
+
 @media (max-width: 820px){
 
   .navbar{
     flex-direction: column;
     align-items: flex-start;
     padding: 8px 14px;
+    gap: 8px;
   }
 
   .logo img{
     width: 130px;
   }
 
-  /* Menu plus compact pour éviter une grosse hauteur */
+  /* MENU : une seule ligne scrollable */
   .nav-links{
     width: 100%;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    justify-content: flex-start;
+    flex-wrap: nowrap;           /* une seule ligne */
     white-space: nowrap;
-    gap: 8px;
-    padding-bottom: 4px;
+    overflow-x: auto;            /* scroll horizontal */
+    overflow-y: hidden;
+    gap: 10px;
+    scrollbar-width: none;       /* Firefox */
+  }
+  .nav-links::-webkit-scrollbar{
+    display: none;               /* Safari / Chrome */
   }
 
   .nav-links li{
-    flex: 0 0 auto;
+    flex: 0 0 auto;              /* chaque bouton garde sa largeur */
   }
 
   .nav-links a{
-    font-size: 13px;
     padding: 6px 10px;
+    font-size: 13px;
+    min-width: 95px;             /* force le débordement => scroll */
+    text-align: center;
   }
+
+  /* HERO : garder texte + vidéo côte à côte */
+  .photo-hero-inner{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .photo-hero-text,
+  .photo-hero-media{
+    flex: 1 1 50%;
+  }
+
+  .photo-hero-media{
+    order: 0;
+  }
+}
+
+/* Très petits écrans : là on empile pour ne pas tout tasser */
+@media (max-width: 480px){
 
   .photo-hero-inner{
     flex-direction: column;
   }
 
   .photo-hero-media{
-    order: -1;     /* vidéo au-dessus du texte sur mobile */
+    order: -1;  /* vidéo au-dessus du texte uniquement sur très petit écran */
   }
 }
 
@@ -415,3 +445,4 @@ footer{
     padding: 10px 0 14px;
   }
 }
+
