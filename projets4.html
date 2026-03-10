@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAS Synology DS220+ – Projet | Nahem Rigaldies</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <h1 class="logo">
+        <a href="index.html" aria-label="Accueil">
+          <img src="assets/images/logo_wtf.png" alt="Logo WTF - Welcome To Futur">
+        </a>
+      </h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Pro</a>
+          <ul class="dropdown-menu">
+            <li><a href="wtf.html">WTF</a></li>
+            <li><a href="developpement_web.html">Développement web</a></li>
+            <li><a href="reparation_informatique.html">Réparation informatique</a></li>
+            <li><a href="indexPhoto.html">Photo</a></li>
+            <li><a href="projets.html" class="active">Projets perso</a></li>
+          </ul>
+        </li>
+
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <h2>NAS Synology DS220+ — Remise en service & sécurisation</h2>
+          <p>
+            Dans le cadre de mon <b>Service Civique</b> au <b>Sporting Club Bourguesan (SCB)</b> à Bourg-Saint-Andéol,
+            j’ai remis en production un <b>NAS Synology DS220+</b> acheté en 2024 mais jamais utilisé.
+            Objectif : <b>restaurer</b> le stockage, <b>sécuriser</b> l’accès, et rendre le NAS <b>vraiment exploitable</b>
+            pour centraliser les documents et médias du club.
+          </p>
+        </div>
+
+        <!-- Emplacement image "NAS en situation" (facultatif) -->
+        <!-- <img class="photo-profil" src="assets/images/NAS/hero_nas.jpg" alt="NAS Synology DS220+"> -->
+      </div>
+    </section>
+
+    <!-- Détails du projet -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3 class="mt-0">Résumé du projet</h3>
+        <p>
+          Le NAS était inutilisable : stockage dégradé, volume inexistant, perte d’identifiants administrateur,
+          et signaux d’erreurs au démarrage (voyants rouges + bips).
+          Après confirmation qu’aucune donnée importante n’était stockée (car aucun volume fonctionnel n’avait jamais été créé),
+          j’ai pu reconstruire une base saine puis mettre en place une organisation complète : <b>groupes</b>, <b>utilisateurs</b>,
+          <b>dossiers partagés</b>, <b>sauvegardes</b>, <b>snapshots</b>, <b>accès distant</b> et <b>mesures de sécurité</b>.
+        </p>
+
+        <!-- Emplacement image "Tableau des matières / aperçu doc" -->
+        <!-- <img src="assets/images/NAS/doc_resume.png" alt="Aperçu du compte-rendu" style="margin-top:14px; border-radius:16px; border:1px solid var(--line);"> -->
+
+        <h3>Objectifs</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" checked disabled /> Remettre le NAS en état (pool/volume opérationnels)</li>
+          <li><input type="checkbox" checked disabled /> Centraliser les données du club (docs + médias)</li>
+          <li><input type="checkbox" checked disabled /> Organiser les accès (groupes, utilisateurs, permissions)</li>
+          <li><input type="checkbox" checked disabled /> Mettre en place une stratégie de sauvegarde fiable</li>
+          <li><input type="checkbox" checked disabled /> Renforcer la sécurité (2FA, mots de passe, pare-feu, MAJ, etc.)</li>
+          <li><input type="checkbox" checked disabled /> Produire une documentation simple pour les bénévoles</li>
+        </ul>
+
+        <h3>Problématique initiale</h3>
+        <p class="muted">
+          Dysfonctionnements identifiés sur le NAS :
+        </p>
+        <ul class="checklist">
+          <li><b>•</b> Disques défectueux / configuration incohérente</li>
+          <li><b>•</b> Groupe de stockage inutilisable</li>
+          <li><b>•</b> Volume inexistant → NAS inexploitable</li>
+          <li><b>•</b> Identifiants admin perdus</li>
+          <li><b>•</b> Bouton RESET inopérant</li>
+          <li><b>•</b> Voyants rouges + bips au démarrage</li>
+        </ul>
+
+        <!-- Emplacements images "avant" -->
+        <div class="projects-grid grid-compact" style="margin-top:14px;">
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/etatinitial.JPEG" class="project-cover" alt="État initial du NAS (voyants / alertes)">
+            <div class="project-content">
+              <p class="muted">État initial (voyants / alertes)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/etatinitial.JPEG" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/stockagedegrade.JPEG" class="project-cover" alt="Stockage dégradé / disque en panne">
+            <div class="project-content">
+              <p class="muted">Stockage dégradé / disque en panne</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/stockagedegrade.JPEG" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+        </div>
+
+        <h3>Choix techniques</h3>
+        <ul class="checklist">
+          <li><b>•</b> Conservation du NAS (matériel adapté à un usage associatif, pas obsolète)</li>
+          <li><b>•</b> Stockage en <b>SHR (Synology Hybrid RAID)</b> pour la flexibilité et la maintenance</li>
+          <li><b>•</b> Système de fichiers <b>Btrfs</b> (snapshots, protection et fonctions avancées)</li>
+          <li><b>•</b> Chiffrement global désactivé (risque de perte de clé / contexte associatif), chiffrement possible par dossier si besoin</li>
+          <li><b>•</b> Sécurité “proportionnée” : essentiel sans complexifier inutilement (bénévoles)</li>
+        </ul>
+
+        <!-- Emplacement image "choix SHR/Btrfs" -->
+        <!-- <img src="assets/images/NAS/PLACEHOLDER_03_choix_shr_btrfs.png" alt="Capture DSM : configuration SHR + Btrfs" style="margin-top:14px; border-radius:16px; border:1px solid var(--line);"> -->
+
+        <h3>Stack technique</h3>
+        <ul class="tags">
+          <li>Synology DS220+</li>
+          <li>DSM</li>
+          <li>SHR</li>
+          <li>Btrfs</li>
+          <li>SMB</li>
+          <li>Utilisateurs / Groupes</li>
+          <li>Permissions (ACL)</li>
+          <li>Hyper Backup</li>
+          <li>Snapshot Replication</li>
+          <li>QuickConnect</li>
+          <li>Pare-feu</li>
+          <li>2FA</li>
+        </ul>
+
+        <h3>Architecture</h3>
+        <p class="muted">
+          Le projet a été structuré en “blocs” (comme une vraie mise en prod) :
+        </p>
+        <ul class="checklist">
+          <li><b>Stockage</b> — diagnostic, suppression/réinitialisation, création d’un nouveau pool + volume</li>
+          <li><b>Organisation logique</b> — groupes, utilisateurs, dossiers partagés, héritage et permissions</li>
+          <li><b>Sauvegarde</b> — stratégie cloud + disque externe via Hyper Backup</li>
+          <li><b>Protection incidents</b> — snapshots Btrfs + politique de rétention</li>
+          <li><b>Accès</b> — SMB (Mac/Windows), mobile, client web, QuickConnect</li>
+          <li><b>Sécurisation</b> — mots de passe, 2FA, désactivation admin/guest, pare-feu, mises à jour</li>
+          <li><b>Documentation</b> — guide simple pour autonomie des bénévoles</li> 
+        </ul>
+
+        <!-- Emplacement image "schéma architecture" -->
+        <!-- <img src="assets/images/NAS/PLACEHOLDER_04_schema_archi.png" alt="Schéma architecture NAS (réseau + usages)" style="margin-top:14px; border-radius:16px; border:1px solid var(--line);"> -->
+
+        <h3>Architecture finale</h3>
+        <p class="muted">
+          Structure logique mise en place pour le club (exemple fidèle à ton organisation) :
+        </p>
+
+        <ul class="checklist">
+          <li><b>Groupes</b> — Administrators / Bureau / Coachs / Communication</li>
+          <li><b>Dossier partagé principal</b> — <b>“Sporting Club Bourguesan”</b> (corbeille activée + délai avant suppression définitive)</li>
+          <li><b>Sous-dossiers</b> — Archives, Comptabilité, Entrainements, Équipes, Licences, Matchs, Médias</li>
+          <li><b>Permissions</b> — héritage activé par défaut, ajustements ponctuels sur sous-dossiers si nécessaire</li>
+          <li><b>Comptes sensibles</b> — comptes admin avec 2FA + comptes “admin/guest” connus désactivés</li>
+        </ul>
+
+        <!-- Emplacements images "groupes / partages / permissions" -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/GroupesETutilisateurs.png" class="project-cover" alt="Capture DSM : groupes">
+              <div class="project-actions">
+                <p class="muted">Groupes (Administrators, Bureau, Coachs, Communication)</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/GroupesETutilisateurs.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/DossierPartagNas.png" class="project-cover" alt="Capture DSM : dossiers partagés">
+              <div class="project-actions">
+                <p class="muted">Dossiers partagés (SCB + arborescence)</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/DossierPartagNas.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/heritage_permissions.png" class="project-cover" alt="Capture DSM : permissions">
+              <div class="project-actions">
+                <p class="muted">Permissions et héritages</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/heritage_permissions.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3>Sauvegarde & protection des données</h3>
+        <ul class="checklist">
+          <li><b>•</b> Mise en place de sauvegardes <b>externes</b> (car <b>RAID ≠ sauvegarde</b>)</li>
+          <li><b>•</b> <b>Hyper Backup</b> vers : <b>Google Drive</b> (cloud de l’association) + <b>disque dur externe</b> connecté au NAS</li>
+          <li><b>•</b> Snapshots <b>Btrfs</b> via <b>Snapshot Replication</b> + politique de conservation pour éviter la saturation</li>
+        </ul>
+
+        <!-- Emplacements images "Hyper Backup / Snapshots" -->
+        <div class="projects-grid grid-compact" style="margin-top:14px;">
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/hyperbackup.png" class="project-cover" alt="Hyper Backup : tâches & planification">
+            <div class="project-content">
+              <p class="muted">Hyper Backup - sauvegarde (cloud + disque externe)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/hyperbackup.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/snapshot.jpeg" class="project-cover" alt="Snapshot Replication : planification">
+            <div class="project-content">
+              <p class="muted">Snapshots Btrfs - conservation (fréquence + rétention)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/snapshot.jpeg" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+        </div>
+
+        <h3>Accès local, mobilité & accès distant</h3>
+        <ul class="checklist">
+          <li><b>•</b> Accès local via <b>SMB</b> (macOS : <code>smb://IP</code> / Windows : <code>\\IP</code>)</li>
+          <li><b>•</b> Applications Synology : <b>Synology Drive Server</b> (collaboration) + <b>DS File</b> (lecture)</li>
+          <li><b>•</b> Client web (dépannage/accès temporaire) : <code>http://IP_DU_NAS:5000</code></li>
+          <li><b>•</b> Accès externe simplifié via <b>QuickConnect</b> (choisi vs VPN pour rester maintenable par des bénévoles)</li>
+        </ul>
+
+        <!-- Emplacements images "SMB / Drive / QuickConnect" -->
+        <div class="projects-grid grid-compact" style="margin-top:14px;">
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/smb.png" class="project-cover" alt="Connexion SMB (macOS/Windows)">
+            <div class="project-content">
+              <p class="muted">Connexion SMB (Mac / Windows)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/smb.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/quickconnect.png" class="project-cover" alt="QuickConnect : configuration">
+            <div class="project-content">
+              <p class="muted">QuickConnect (configuration)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/quickconnect.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+        </div>
+
+        <h3>Sécurisation du système</h3>
+        <ul class="checklist">
+          <li><b>•</b> Politique de mots de passe : <b>≥ 12 caractères</b> + majuscule + chiffre + caractère spécial</li>
+          <li><b>•</b> <b>2FA</b> obligatoire pour les comptes administrateurs</li>
+          <li><b>•</b> Désactivation des comptes <b>admin</b> et <b>guest</b> (cibles classiques d’attaques)</li>
+          <li><b>•</b> Pare-feu activé + règles ajustées (une règle trop restrictive bloquait l’accès externe)</li>
+          <li><b>•</b> Mises à jour DSM + applications (corrections et sécurité)</li>
+          <li><b>•</b> Permissions en <b>moindre privilège</b> pour limiter l’impact d’un incident</li>
+        </ul>
+
+        <!-- Emplacement image "pare-feu / sécurité / 2FA" -->
+        <div class="projects-grid grid-compact" style="margin-top:14px;">
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/Pare_Feu.png" class="project-cover" alt="Pare-feu DSM : règles">
+            <div class="project-content">
+              <p class="muted">Pare-feu DSM</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/Pare_Feu.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/ProjetsNas/2FAadmin.png" class="project-cover" alt="2FA : sécurité comptes admin">
+            <div class="project-content">
+              <p class="muted">2FA (comptes administrateurs)</p>
+              <a class="btn ghost" href="assets/images/ProjetsNas/2FAadmin.png" target="_blank" rel="noopener">Aperçu</a>
+            </div>
+          </article>
+        </div>
+
+        <h3>Résultats</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" checked disabled /> NAS remis en production : pool/volume fonctionnels, base saine</li>
+          <li><input type="checkbox" checked disabled /> Données centralisées et structurées (documents + médias)</li>
+          <li><input type="checkbox" checked disabled /> Accès simplifié pour les bénévoles (SMB, mobile, QuickConnect)</li>
+          <li><input type="checkbox" checked disabled /> Sauvegardes + snapshots : meilleure résilience (erreur humaine / ransomware / incident)</li>
+          <li><input type="checkbox" checked disabled /> Documentation pour assurer autonomie et passation</li>
+        </ul>
+
+        <div class="project-actions" style="margin-top:16px;">
+          <!-- Mets tes vrais liens ici -->
+          <a href="assets/images/ProjetsNas/NasDocumentation.pdf" target="_blank" rel="noopener noreferrer" class="btn ghost">
+            <i class="fa-solid fa-file-lines"></i>&nbsp;Documentation NAS (PDF)
+          </a>
+          <a href="assets/images/ProjetsNas/contrerendunasComplet.pdf" target="_blank" rel="noopener noreferrer" class="btn ghost">
+            <i class="fa-solid fa-clipboard"></i>&nbsp;Compte-rendu complet (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galerie / Aperçu -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3>Captures d’écran</h3>
+        <p class="muted">
+          Résumé visuel rapide sur le : stockage, arborescence,
+          Hyper Backup, snapshots, QuickConnect, pare-feu, utilisateurs/groupes.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/stockage.png" class="project-cover" alt="Capture DSM 1">
+              <div class="project-actions">
+                <p class="muted">DSM — Stockage de données</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/stockage.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/DossierPartage.png" class="project-cover" alt="Capture DSM 2">
+              <div class="project-actions">
+                <p class="muted">DSM — Dossiers partagés</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/DossierPartage.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/GroupesETutilisateurs.png" class="project-cover" alt="Capture DSM 3">
+              <div class="project-actions">
+                <p class="muted">DSM — Utilisateurs / Groupes</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/GroupesETutilisateurs.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/hyperbackup.png" class="project-cover" alt="Capture DSM 4">
+              <div class="project-actions">
+                <p class="muted">Hyper Backup — Tâches</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/hyperbackup.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/snapshot.jpeg" class="project-cover" alt="Capture DSM 5">
+              <div class="project-actions">
+                <p class="muted">Snapshots — Planification</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/snapshot.jpeg" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <img src="assets/images/ProjetsNas/Pare_Feu.png" class="project-cover" alt="Capture DSM 6">
+              <div class="project-actions">
+                <p class="muted">Sécurité — Pare-feu / 2FA</p>
+                <a class="btn ghost" href="assets/images/ProjetsNas/Pare_Feu.png" target="_blank" rel="noopener">Aperçu</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section apprentissage -->
+    <section>
+      <div class="wrapper fade-up">
+        <h3>Ce que ce projet m’a apporté</h3>
+        <ul class="checklist">
+          <li><b>•</b> Diagnostic & résolution d’incidents (stockage, accès, pare-feu, redémarrage “prise en compte”)</li>
+          <li><b>•</b> Administration système : création d’un environnement exploitable et maintenable</li>
+          <li><b>•</b> Stockage & protection : SHR, sauvegardes externes, snapshots Btrfs</li>
+          <li><b>•</b> Sécurité : 2FA, politiques MDP, durcissement “raisonné”, moindre privilège</li>
+          <li><b>•</b> Documentation technique : rendre l’outil autonome pour des non-techniciens</li>
+          <li><b>•</b> Dimension humaine : récupération d’infos/accès, contraintes bénévoles, budget limité</li>
+        </ul>
+
+        <h3>Difficultés rencontrées (exemples)</h3>
+        <ul class="checklist">
+          <li><b>•</b> Bouton RESET inopérant → dépendance aux identifiants retrouvés</li>
+          <li><b>•</b> Panne/instabilité réseau (box) → difficulté à détecter le NAS</li>
+          <li><b>•</b> Règles pare-feu trop restrictives → QuickConnect bloqué (corrigé + redémarrage)</li>
+          <li><b>•</b> Erreur de permission DSM sur un groupe → blocage d’accès (corrigé via compte admin externe)</li>
+          <li><b>•</b> Manque de documentation initiale → nécessité de produire une doc claire</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>
+          Ce projet m’a apporté une <b>expérience réelle</b> en administration système/réseau,
+          avec une logique “production” : diagnostic, choix techniques, mise en place, sécurisation,
+          sauvegarde, et documentation. Pour l’association, le NAS devient enfin un outil utile :
+          <b>centralisation</b>, <b>partage</b>, et <b>meilleure continuité</b> en cas d’incident.
+        </p>
+
+        <!-- Emplacement image "avant/après" -->
+        <!-- <img src="assets/images/NAS/PLACEHOLDER_before_after.png" alt="Avant / Après (résumé visuel)" style="margin-top:14px; border-radius:16px; border:1px solid var(--line);"> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span>Nahem Rigaldies – WTF • Welcome To Futur</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
